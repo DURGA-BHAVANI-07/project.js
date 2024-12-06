@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-In Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       background: url('nature.jpg') no-repeat center ; 
+       background-size: cover;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #signin-form {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    #signin-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #signin-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #signin-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #signin-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form id="signin-form" action="#" method="POST">
+    <h2>Sign In</h2>
+    <input type="text" name="username_email" placeholder="Username or Email" required>
+    <input type="password" name="password" placeholder="Password" minlength="6" required>
+    <button type="submit">Sign In</button>
+
+  </form>
+
+   <script>
+        
+        document.getElementById('signin-form').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            console.log("Form submitted successfully!");
+
+            window.location.href = 'index.html'; 
+        });
+    </script>
+  
+</body>
+</html> 
+
+
